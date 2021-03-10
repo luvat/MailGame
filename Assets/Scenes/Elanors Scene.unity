@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745625751}
   - component: {fileID: 745625750}
-  - component: {fileID: 745625749}
+  - component: {fileID: 745625752}
   m_Layer: 0
   m_Name: Old man
   m_TagString: Untagged
@@ -221,19 +221,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &745625749
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745625748}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6133663, y: 4.8122954, z: 0.2}
-  m_Center: {x: -1.3008816, y: 0.6440699, z: 0}
 --- !u!212 &745625750
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -299,6 +286,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &745625752
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745625748}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.2942853, y: 0.5972116}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6095767, y: 4.887066}
+  m_EdgeRadius: 0
 --- !u!1 &1140081096
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +509,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.2742907, y: 0.0434227}
+  m_Offset: {x: -1.2742907, y: 0.06559771}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -507,7 +520,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.60776496, y: 3.6208935}
+  m_Size: {x: 0.60776496, y: 3.6652436}
   m_EdgeRadius: 0
 --- !u!212 &1791864387
 SpriteRenderer:
@@ -607,7 +620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd8398957c839e4ebe7e08851a59f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 1200
+  body: {fileID: 1791864389}
 --- !u!1 &1962198168
 GameObject:
   m_ObjectHideFlags: 0

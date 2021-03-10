@@ -6,14 +6,20 @@ public class Movement : MonoBehaviour
 {
 
     public int movementSpeed = 5; //Variabel för hur fort Mailman ska kunna gå. Kan också ändras genom unity då-Elanor
-    
+
+    public Rigidbody2D body; //-Elanor
     void Start()
     {
-        
+        /*body = GetComponent<Rigidbody2D>();*/
     }
-
+    
     void Update()
     {
+        /*float vert = Input.GetAxis("Vertical"); //Kollar om man klickar på upp och ned -Elanor
+        float horizont = Input.GetAxis("Horizontal"); //Kollar om man klickar på höger och vänster -Elanor
+
+        body.velocity = new Vector3(horizont * movementSpeed * Time.deltaTime, body.velocity.y, vert * movementSpeed * Time.deltaTime);*/ //ökar och flyttar spelaren genom att ge en velocity -Elanor
+
         //Movement för Mailman-Elanor
         if (Input.GetKey(KeyCode.D))
         {
