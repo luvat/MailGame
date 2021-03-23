@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Elanors Scene.unity
+    guid: 4e2bf5995db8db44691c398ab9ff927e
   m_configObjects: {}
