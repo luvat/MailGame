@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
                     dialog.text = "It must be from him"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
                     break;
                 case 3: //Nästa dialog kommer upp -Elanor 
-                    dialog.text = "He was in the war and sadly he passed away…";
+                    dialog.text = "He was in the war and sadly he \n passed away…";
                     break;
                 case 4: //Gör att Dialog 3 försvinner och att Dialog 4 kommer upp.
                     dialog.text = "But...";
@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour
                     dialog.text = "Oh Tigger";
                     break;
                 case 8:
-                    dialog.text = "You probably don't understand, but this was his cat, Tigger";
+                    dialog.text = "You probably don't understand, but \n this was his cat, Tigger";
                     break;
                 case 9:
                     dialog.text = "It's the last thing i have from him";
@@ -85,7 +85,7 @@ public class Movement : MonoBehaviour
                     dialog.text = "But you, you gave me his last words";
                     break;
                 case 11:
-                    dialog.text = "Thank you for giving me this letter";
+                    dialog.text = "Thank you for giving me \n this letter";
                     break;
             }
         }
@@ -106,7 +106,7 @@ public class Movement : MonoBehaviour
     {
          if (collision.transform.tag == "talk") //Om man är inte är inaför collisonen?-Elanor
          {
-              text.SetActive(false); //Kommer UI:n inte att synas-Elanor
+            text.SetActive(false); //Kommer UI:n inte att synas-Elanor
             showText = false; //Showtext blir false -Elanor
             dialogcounter = 0;// Gör så att Dialog countern blir på 0 igen om man går ut från collison- Elanor
          }         
