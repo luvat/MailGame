@@ -63,16 +63,16 @@ public class Movement : MonoBehaviour
                 case 3: //Nästa dialog kommer upp -Elanor 
                     dialog.text = "He was in the war and sadly he \n passed away…";
                     break;
-                case 4: //Gör att Dialog 3 försvinner och att Dialog 4 kommer upp.
+                case 4: //Nästa dialog kommer upp -Elanor
                     dialog.text = "But...";
                     break;
-                case 5://Gör att Dialog 4 försvinner och att Dialog 5 kommer upp.
+                case 5://Nästa dialog kommer upp -Elanor
                     dialog.text = "He served the city and saved us";
                     break;
-                case 6://Gör att Dialog 5 försvinner och att Dialog 6 kommer upp.
+                case 6://Nästa dialog kommer upp -Elanor.
                     dialog.text = "I really miss him";
                     break;
-                case 7://Gör att Dialog 6 försvinner och att Dialog 7 kommer upp.
+                case 7://och så fortsätter det ^^
                     dialog.text = "Oh Tigger";
                     break;
                 case 8:
