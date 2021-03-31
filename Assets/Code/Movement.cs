@@ -13,9 +13,10 @@ public class Movement : MonoBehaviour
     public GameObject text; //Referens till text gameobject - Elanor
     public Text dialog; //Referens till UI:n vad som står. -Elanor
     public int dialogcounter = 0;// Visar att dialog countern är på 0 när man börjar-Elanor
-    public int dialogcounterLittleBoy = 0;
-    public bool showText = false;
-    public bool showText2 = false;
+    public int dialogcounterLittleBoy = 0; //Dialogcounterlittle boy börjar på 0- elanor.
+    public bool showText = false; //Betyder att showtext är falsk i början- elanor
+    public bool showText2 = false; //Betyder att showtext2 är falsk i början-elanor
+    public Animator movement; //Referens till animator- elanor
 
     public Rigidbody2D body; // Referens till RigedBody2D i player-Elanor
 
@@ -31,22 +32,44 @@ public class Movement : MonoBehaviour
 
         body.velocity = new Vector3(horizont * movementSpeed * Time.deltaTime, body.velocity.y, vert * movementSpeed * Time.deltaTime); //ökar och flyttar spelaren genom att ge en velocity -Elanor
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)) //Om man trycker på W?- Elanor
         {
             body.velocity = (new Vector3(body.velocity.x,movementSpeed * Time.deltaTime, 0)); //Gör så att om man trycker på W kommer mailman röra sig uppåt-Elanor
+            movement.SetBool("walkup", true); //Blir animator walkup true- elanor
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S)) //om man trycker ner S?-elanor
         {
             body.velocity = (new Vector3(body.velocity.x, -movementSpeed * Time.deltaTime, 0)); //Gör så att om man trcker på S kommer Mailman röra sig neråt-Elanor
+            movement.SetBool("walkdown", true); //Blir animation walkdown true -elanor
         }
 
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.W))//Om man trycker på W?- Elanor
         {
             body.velocity = (new Vector3(body.velocity.x, 0, 0)); //Gör så att om man släpper på W kommer mailman sluta röra sig uppåt-Elanor
+            movement.SetBool("walkup", false); //Blir animator walkup falsk- elanor
         }
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.S)) //Om man trycker ner S?
         {
             body.velocity = (new Vector3(body.velocity.x, 0, 0)); //Gör så att om man släpper på S kommer mailman sluta röra sig uppåt-Elanor
+            movement.SetBool("walkdown", false); //Blir animation walkdown falsk -elanor
+        }
+        if (Input.GetKey(KeyCode.D)) //Om man trycker ner T?-elanor
+        {
+            movement.SetBool("walkleftright", true); //blir walkleftright true- elanor
+        }
+        if (Input.GetKeyUp(KeyCode.D)) //Om man trycker ner T?-elanor
+        {
+            movement.SetBool("walkleftright", false); //blir walkleftright false- elanor
+        }
+        if (Input.GetKey(KeyCode.A)) //Om man trycker ner A?-elanor
+        {
+            movement.SetBool("walkleftright", true);  //blir walkleftright true- elanor
+            transform.eulerAngles = new Vector3(0, 180, 0); //Gör att spriten kommer ändra sig så att den blir åt vänster - elanor
+        }
+        if (Input.GetKeyUp(KeyCode.A)) //Om man trycker ner A?-elanor
+        {
+            movement.SetBool("walkleftright", false); //blir walkleftright false- elanor
+            transform.eulerAngles = new Vector3(0, 0, 0); //Gör att vinkeln inte kommer ändras när den blir falsk- elanor
         }
 
         if (Input.GetKeyUp(KeyCode.T) && showText)//Om man klickar T och Showtext är sann?-Elanor
