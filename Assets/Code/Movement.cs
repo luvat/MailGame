@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,10 @@ public class Movement : MonoBehaviour
 
     public GameObject text; //Referens till text gameobject - Elanor
     public Text dialog; //Referens till UI:n vad som står. -Elanor
-    public int dialogcounter = 0;
+    public int dialogcounter = 0;// Visar att dialog countern är på 0 när man börjar-Elanor
+    public int dialogcounterLittleBoy = 0;
+    public bool showText = false;
+    public bool showText2 = false;
 
     public Rigidbody2D body; // Referens till RigedBody2D i player-Elanor
 
@@ -44,64 +48,113 @@ public class Movement : MonoBehaviour
         {
             body.velocity = (new Vector3(body.velocity.x, 0, 0)); //Gör så att om man släpper på S kommer mailman sluta röra sig uppåt-Elanor
         }
+
+        if (Input.GetKeyUp(KeyCode.T) && showText)//Om man klickar T och Showtext är sann?-Elanor
+        {
+            dialogcounter += 1; //Dialogcounter ökar med en varje gång man trycker på T- Elanor 
+
+            switch (dialogcounter) //Switch till Dialogcounter så att när man trycker T igen ska Nästa Case hända-Elanor 
+            {
+                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Elanor 
+                    dialog.text = "Oh is this the letter from my son?";
+
+                    break;
+                case 2:// Dialog 2 kommer upp - Elanor
+                    dialog.text = "It must be from him"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
+                    break;
+                case 3: //Nästa dialog kommer upp -Elanor 
+                    dialog.text = "He was in the war and sadly he \n passed away…";
+                    break;
+                case 4: //Nästa dialog kommer upp -Elanor
+                    dialog.text = "But...";
+                    break;
+                case 5://Nästa dialog kommer upp -Elanor
+                    dialog.text = "He served the city and saved us";
+                    break;
+                case 6://Nästa dialog kommer upp -Elanor.
+                    dialog.text = "I really miss him";
+                    break;
+                case 7://och så fortsätter det ^^
+                    dialog.text = "Oh Tigger";
+                    break;
+                case 8:
+                    dialog.text = "You probably don't understand, but \n this was his cat, Tigger";
+                    break;
+                case 9:
+                    dialog.text = "It's the last thing i have from him";
+                    break;
+                case 10:
+                    dialog.text = "But you, you gave me his last words";
+                    break;
+                case 11:
+                    dialog.text = "Thank you for giving me \n this letter";
+                    break;
+            }
+
+        }
+        if (Input.GetKeyUp(KeyCode.T) && showText2)//Om man klickar T och Showtext2 är sann?-Elanor
+        {
+            dialogcounterLittleBoy += 1; //Dialogcounter ökar med en varje gång man trycker på T- Elanor 
+
+            switch (dialogcounterLittleBoy) //Switch till Dialogcounterlittleboy så att när man trycker T igen ska Nästa Case hända-Elanor 
+            {
+                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Elanor 
+                    dialog.text = "Dad! \n Its from him!";
+                    break;
+                case 2:// Dialog 2 kommer upp - Elanor
+                    dialog.text = "My dad never returned from the war"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
+                    break;
+                case 3: //Nästa dialog kommer upp -Elanor 
+                    dialog.text = "I miss him";
+                    break;
+                case 4: //Nästa dialog kommer upp -Elanor
+                    dialog.text = "It have been 8 months since he \n left for the war";
+                    break;
+                case 5://Nästa dialog kommer upp -Elanor
+                    dialog.text = "And now I always come here";
+                    break;
+                case 6://Nästa dialog kommer upp -Elanor.
+                    dialog.text = "Dreaming he's out there, happy";
+                    break;
+                case 7://och så fortsätter det ^^
+                    dialog.text = "He always gonna be in my heart";
+                    break;
+                case 8:
+                    dialog.text = "Thank you sir for giving me this letter! It made me very happy";
+                    break;
+            }
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.tag == "talk") //Om man är inaför collisonen?-Elanor
         {
-            dialog.text = "Press 'T'"; //Gör så att om du går in i colliderna så kommer texten "press T" komma fram- Elanor
-
-            if (Input.GetKeyDown(KeyCode.T))
-
-            
-            dialogcounter += 1; //Dialogcounter ökar med en varje gång man trycker på T.
-             
-            switch (dialogcounter) //Switch till Dialogcounter så att när man trycker T igen ska Nästa Case hända. 
+            text.SetActive(true); //Kommer UI:n inte att synas-Elanor
+            if (!showText) //Om showtexten är false- Elanor
             {
-                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp.
-                    dialog.text = "Oh is this the letter from my son?"; 
-
-                    break;
-                case 2://Gör att Dialog 1 försvinner och att Dialog 2 kommer upp.
-                    dialog.text = "It must be from him";
-                    break;
-                case 3: //Gör att Dialog 2 försvinner och att Dialog 3 kommer upp.
-                    
-                    break;
-                case 4: //Gör att Dialog 3 försvinner och att Dialog 4 kommer upp.
-                    
-                    break;
-                case 5://Gör att Dialog 4 försvinner och att Dialog 5 kommer upp.
-                    
-                    break;
-                case 6://Gör att Dialog 5 försvinner och att Dialog 6 kommer upp.
-                    
-                    break;
-                case 7://Gör att Dialog 6 försvinner och att Dialog 7 kommer upp.
-                    
-                    break;
+                dialog.text = "Press 'T'"; //Gör så att om du går in i colliderna så kommer texten "press T" komma fram- Elanor
             }
+            showText = true; //Gör att om man är innanför collisonen så är showText sann-Elanor
         }
-        /* if (collision.transform.tag == "talk") //Om man är inaför collisonen?-Elanor
-         {
-             if (Input.GetKeyDown(KeyCode.T)) //Gör så att om man är innanför collisonen och trycker på T så kommer texten komma up-Elanor
-             {
-                 text.SetActive(true); //Så kommer UI:n synas (alltså det jag kommer ha skrivt kommer synas)-Elanor 
-                 dialog.text = "heej"; //Texten över vad som ska stå i spelet- Elanor
-             }
-             if (Input.GetKeyDown(KeyCode.Space))
-             {
-                 dialog.text = "whats up";
-             }
-         }*/
-
+        if (collision.transform.tag == "Littleboytalk") //Om man är inaför collisonen?-Elanor
+        {
+            text.SetActive(true); //Kommer UI:n inte att synas-Elanor
+            if (!showText2) //Om showtext2 är false- Elanor
+            {
+                dialog.text = "Press 'T'"; //Gör så att om du går in i colliderna så kommer texten "press T" komma fram- Elanor
+            }
+            showText2 = true; //Gör att om man är innanför collisonen så är showText2 sann-Elanor
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-         if (collision.transform.tag == "talk") //Om man är inte är inaför collisonen?-Elanor
+         if (collision.transform.tag == "talk" || collision.transform.tag == "Littleboytalk") //Om man är inte är inaför collisonen?-Elanor
          {
-              text.SetActive(false); //Kommer UI:n inte att synas-Elanor
-         }
-           
+            text.SetActive(false); //Kommer UI:n inte att synas-Elanor
+            showText = false; //Showtext blir false -Elanor
+            showText2 = false; //Show text2 blir falsk -Elanor
+            dialogcounter = 0;// Gör så att Dialog countern blir på 0 igen om man går ut från collison- Elanor
+            dialogcounterLittleBoy = 0; //Gör så att Dialogcountern till lilla pojken blir till 0 igen om man går ut från collison- Elanor
+         }         
     }
 }
