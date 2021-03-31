@@ -15098,7 +15098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745625748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6, y: -4.9, z: 0}
+  m_LocalPosition: {x: -17.1, y: 13.7, z: 0}
   m_LocalScale: {x: 3, y: 0.6, z: 1}
   m_Children:
   - {fileID: 655436701}
@@ -24292,7 +24292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147552233}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 66.39859, y: -15.662807, z: 91.34896}
+  m_LocalPosition: {x: 65.99, y: -15.662807, z: 91.34896}
   m_LocalScale: {x: 641.54865, y: 3.586787, z: 0}
   m_Children: []
   m_Father: {fileID: 87624276}
@@ -24331,7 +24331,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147552233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -33142,7 +33142,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.062316418, y: 0}
+  m_Offset: {x: 0.062316895, y: 2.3272424}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -33153,7 +33153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 25.155369, y: 25.28}
+  m_Size: {x: 25.155369, y: 20.625519}
   m_EdgeRadius: 0
 --- !u!212 &1557531778
 SpriteRenderer:
@@ -34178,7 +34178,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: cac5b56fb4984154e811ea8fa1bf6e8e, type: 3}
   m_Color: {r: 0.9981981, g: 0.047169805, b: 1, a: 1}
   m_FlipX: 0
@@ -34198,7 +34198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580830512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.84, y: -4.83, z: 0}
+  m_LocalPosition: {x: 93.6, y: 52.2, z: 0}
   m_LocalScale: {x: 3, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37703,11 +37703,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd8398957c839e4ebe7e08851a59f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2000
+  movementSpeed: 1500
   text: {fileID: 1337217314}
   dialog: {fileID: 1337217316}
   dialogcounter: 0
+  dialogcounterLittleBoy: 0
   showText: 0
+  showText2: 0
   body: {fileID: 1791864389}
 --- !u!1 &1797930801
 GameObject:

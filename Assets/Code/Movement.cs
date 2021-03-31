@@ -99,38 +99,28 @@ public class Movement : MonoBehaviour
             switch (dialogcounterLittleBoy) //Switch till Dialogcounterlittleboy så att när man trycker T igen ska Nästa Case hända-Elanor 
             {
                 case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Elanor 
-                    dialog.text = ":)";
-
+                    dialog.text = "Dad! \n Its from him!";
                     break;
                 case 2:// Dialog 2 kommer upp - Elanor
-                    dialog.text = "It must be from him"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
+                    dialog.text = "My dad never returned from the war"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
                     break;
                 case 3: //Nästa dialog kommer upp -Elanor 
-                    dialog.text = "He was in the war and sadly he \n passed away…";
+                    dialog.text = "I miss him";
                     break;
                 case 4: //Nästa dialog kommer upp -Elanor
-                    dialog.text = "But...";
+                    dialog.text = "It have been 8 months since he \n left for the war";
                     break;
                 case 5://Nästa dialog kommer upp -Elanor
-                    dialog.text = "He served the city and saved us";
+                    dialog.text = "And now I always come here";
                     break;
                 case 6://Nästa dialog kommer upp -Elanor.
-                    dialog.text = "I really miss him";
+                    dialog.text = "Dreaming he's out there, happy";
                     break;
                 case 7://och så fortsätter det ^^
-                    dialog.text = "Oh Tigger";
+                    dialog.text = "He always gonna be in my heart";
                     break;
                 case 8:
-                    dialog.text = "You probably don't understand, but \n this was his cat, Tigger";
-                    break;
-                case 9:
-                    dialog.text = "It's the last thing i have from him";
-                    break;
-                case 10:
-                    dialog.text = "But you, you gave me his last words";
-                    break;
-                case 11:
-                    dialog.text = "Thank you for giving me \n this letter";
+                    dialog.text = "Thank you sir for giving me this letter! It made me very happy";
                     break;
             }
         }
@@ -162,9 +152,9 @@ public class Movement : MonoBehaviour
          {
             text.SetActive(false); //Kommer UI:n inte att synas-Elanor
             showText = false; //Showtext blir false -Elanor
-            showText2 = false;
+            showText2 = false; //Show text2 blir falsk -Elanor
             dialogcounter = 0;// Gör så att Dialog countern blir på 0 igen om man går ut från collison- Elanor
             dialogcounterLittleBoy = 0; //Gör så att Dialogcountern till lilla pojken blir till 0 igen om man går ut från collison- Elanor
-        }         
+         }         
     }
 }
