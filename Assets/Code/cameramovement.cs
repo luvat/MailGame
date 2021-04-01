@@ -9,6 +9,6 @@ public class cameramovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z - 10); //Gör att den följer efter player i alla vinklar- Elanor
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 4, player.transform.position.z - 10); //Gör att den följer efter player i alla vinklar- Elanor
     }
 }

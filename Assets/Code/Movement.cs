@@ -27,10 +27,10 @@ public class Movement : MonoBehaviour
     
     void Update()
     {
-        float vert = Input.GetAxis("Vertical"); //Kollar om man klickar på upp och ned -Elanor
-        float horizont = Input.GetAxis("Horizontal"); //Kollar om man klickar på höger och vänster -Elanor
+       // float vert = Input.GetAxis("Vertical"); //Kollar om man klickar på upp och ned -Elanor
+        //float horizont = Input.GetAxis("Horizontal"); //Kollar om man klickar på höger och vänster -Elanor
 
-        body.velocity = new Vector3(horizont * movementSpeed * Time.deltaTime, body.velocity.y, vert * movementSpeed * Time.deltaTime); //ökar och flyttar spelaren genom att ge en velocity -Elanor
+       // body.velocity = new Vector3(horizont * movementSpeed * Time.deltaTime, body.velocity.y, vert * movementSpeed * Time.deltaTime); //ökar och flyttar spelaren genom att ge en velocity -Elanor
 
         if (Input.GetKey(KeyCode.W)) //Om man trycker på W?- Elanor
         {
@@ -53,21 +53,25 @@ public class Movement : MonoBehaviour
             body.velocity = (new Vector3(body.velocity.x, 0, 0)); //Gör så att om man släpper på S kommer mailman sluta röra sig uppåt-Elanor
             movement.SetBool("walkdown", false); //Blir animation walkdown falsk -elanor
         }
-        if (Input.GetKey(KeyCode.D)) //Om man trycker ner T?-elanor
+        if (Input.GetKey(KeyCode.D)) //Om man trycker ner D?-elanor
         {
+            body.velocity = (new Vector3(movementSpeed * Time.deltaTime, body.velocity.y, 0)); //Gör så att om man trycker på W kommer mailman röra sig uppåt-Elanor
             movement.SetBool("walkleftright", true); //blir walkleftright true- elanor
         }
-        if (Input.GetKeyUp(KeyCode.D)) //Om man trycker ner T?-elanor
+        if (Input.GetKeyUp(KeyCode.D)) //Om man släpper D?-elanor
         {
+            body.velocity = (new Vector3(0, body.velocity.y, 0)); //Gör så att om man trycker på W kommer mailman röra sig uppåt-Elanor
             movement.SetBool("walkleftright", false); //blir walkleftright false- elanor
         }
         if (Input.GetKey(KeyCode.A)) //Om man trycker ner A?-elanor
         {
+            body.velocity = (new Vector3(-movementSpeed * Time.deltaTime, body.velocity.y, 0)); //Gör så att om man trycker på A kommer mailman röra sig vänster-Elanor
             movement.SetBool("walkleftright", true);  //blir walkleftright true- elanor
             transform.eulerAngles = new Vector3(0, 180, 0); //Gör att spriten kommer ändra sig så att den blir åt vänster - elanor
         }
-        if (Input.GetKeyUp(KeyCode.A)) //Om man trycker ner A?-elanor
+        if (Input.GetKeyUp(KeyCode.A)) //Om man släpper A?-elanor
         {
+            body.velocity = (new Vector3(0, -body.velocity.y, 0)); //Gör så att om man släpper A kommer mailman sluta röra sig vänster-Elanor
             movement.SetBool("walkleftright", false); //blir walkleftright false- elanor
             transform.eulerAngles = new Vector3(0, 0, 0); //Gör att vinkeln inte kommer ändras när den blir falsk- elanor
         }

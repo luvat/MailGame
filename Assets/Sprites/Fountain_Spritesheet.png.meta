@@ -1,7 +1,202 @@
 fileFormatVersion: 2
 guid: 29d505fc461ac6a4f9066ae4bf2097df
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4012004182209595291
+    second: Fountain_Spritesheet_0
+  - first:
+      213: -804615854259220370
+    second: Fountain_Spritesheet_1
+  - first:
+      213: -8377505359248603507
+    second: Fountain_Spritesheet_2
+  - first:
+      213: -4839504220694418917
+    second: Fountain_Spritesheet_3
+  - first:
+      213: -1075313095467244309
+    second: Fountain_Spritesheet_4
+  - first:
+      213: -544907956101034941
+    second: Fountain_Spritesheet_5
+  - first:
+      213: -1294685287121946387
+    second: Fountain_Spritesheet_6
+  - first:
+      213: 8775094233753647677
+    second: Fountain_Spritesheet_7
+  - first:
+      213: 4557734534511230188
+    second: Fountain_Spritesheet_8
+  - first:
+      213: -6907327377829866026
+    second: Fountain_Spritesheet_9
+  - first:
+      213: -2998195595883570791
+    second: Fountain_Spritesheet_10
+  - first:
+      213: -4670353893298151971
+    second: Fountain_Spritesheet_11
+  - first:
+      213: -8917901186213346141
+    second: Fountain_Spritesheet_12
+  - first:
+      213: 7619482546384839209
+    second: Fountain_Spritesheet_13
+  - first:
+      213: -7186679198941949902
+    second: Fountain_Spritesheet_14
+  - first:
+      213: -3861294507799504175
+    second: Fountain_Spritesheet_15
+  - first:
+      213: -4635932958118511063
+    second: Fountain_Spritesheet_16
+  - first:
+      213: -4827232147700766458
+    second: Fountain_Spritesheet_17
+  - first:
+      213: 6180956872970691165
+    second: Fountain_Spritesheet_18
+  - first:
+      213: 7639129311598026797
+    second: Fountain_Spritesheet_19
+  - first:
+      213: 255281368529763896
+    second: Fountain_Spritesheet_20
+  - first:
+      213: 7254265577444391632
+    second: Fountain_Spritesheet_21
+  - first:
+      213: 7751151317385967570
+    second: Fountain_Spritesheet_22
+  - first:
+      213: -972592484098622174
+    second: Fountain_Spritesheet_23
+  - first:
+      213: -1568049021712996743
+    second: Fountain_Spritesheet_24
+  - first:
+      213: 2801697688520137134
+    second: Fountain_Spritesheet_25
+  - first:
+      213: 8050284251706309830
+    second: Fountain_Spritesheet_26
+  - first:
+      213: 8403597906018952845
+    second: Fountain_Spritesheet_27
+  - first:
+      213: 1740504544624867299
+    second: Fountain_Spritesheet_28
+  - first:
+      213: -227486436405572372
+    second: Fountain_Spritesheet_29
+  - first:
+      213: 3903489386225056981
+    second: Fountain_Spritesheet_30
+  - first:
+      213: 3614531475188635387
+    second: Fountain_Spritesheet_31
+  - first:
+      213: 1438589112274296827
+    second: Fountain_Spritesheet_32
+  - first:
+      213: 2014220503935883567
+    second: Fountain_Spritesheet_33
+  - first:
+      213: 7724995131377268133
+    second: Fountain_Spritesheet_34
+  - first:
+      213: 3668873847879207470
+    second: Fountain_Spritesheet_35
+  - first:
+      213: 8113233698513928579
+    second: Fountain_Spritesheet_36
+  - first:
+      213: -6664093583661413983
+    second: Fountain_Spritesheet_37
+  - first:
+      213: -5098565392841764649
+    second: Fountain_Spritesheet_38
+  - first:
+      213: 6927269831097938785
+    second: Fountain_Spritesheet_39
+  - first:
+      213: 1386867621550024625
+    second: Fountain_Spritesheet_40
+  - first:
+      213: 2618500736512417544
+    second: Fountain_Spritesheet_41
+  - first:
+      213: -6764023678833242757
+    second: Fountain_Spritesheet_42
+  - first:
+      213: -2766025897869899938
+    second: Fountain_Spritesheet_43
+  - first:
+      213: 3336435709413396030
+    second: Fountain_Spritesheet_44
+  - first:
+      213: -3960268618611894412
+    second: Fountain_Spritesheet_45
+  - first:
+      213: -3397127606061401984
+    second: Fountain_Spritesheet_46
+  - first:
+      213: 1456878835369086889
+    second: Fountain_Spritesheet_47
+  - first:
+      213: 7718068414637635011
+    second: Fountain_Spritesheet_48
+  - first:
+      213: 3719891047659967461
+    second: Fountain_Spritesheet_49
+  - first:
+      213: -513865562099023730
+    second: Fountain_Spritesheet_50
+  - first:
+      213: 6199044167333569915
+    second: Fountain_Spritesheet_51
+  - first:
+      213: 4881816250786625357
+    second: Fountain_Spritesheet_52
+  - first:
+      213: -8872939390286317794
+    second: Fountain_Spritesheet_53
+  - first:
+      213: 9041247419473372399
+    second: Fountain_Spritesheet_54
+  - first:
+      213: -5916749729638834798
+    second: Fountain_Spritesheet_55
+  - first:
+      213: 5463791535785501804
+    second: Fountain_Spritesheet_56
+  - first:
+      213: 8887958921190592886
+    second: Fountain_Spritesheet_57
+  - first:
+      213: -1999805594219505928
+    second: Fountain_Spritesheet_58
+  - first:
+      213: 8069783012644785536
+    second: Fountain_Spritesheet_59
+  - first:
+      213: -7027317656740482550
+    second: Fountain_Spritesheet_60
+  - first:
+      213: -5831731243960154933
+    second: Fountain_Spritesheet_61
+  - first:
+      213: 7472055503795376748
+    second: Fountain_Spritesheet_62
+  - first:
+      213: 4936203143563621836
+    second: Fountain_Spritesheet_63
+  - first:
+      213: 5272406342207379237
+    second: Fountain_Spritesheet_64
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +226,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +235,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,7 +292,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b970cf51c808da730800000000000000
+      internalID: 4012004182209595291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e605b32c42e65d4f0800000000000000
+      internalID: -804615854259220370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d864e0ef24f1dbb80800000000000000
+      internalID: -8377505359248603507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a61845d80a6dcb0800000000000000
+      internalID: -4839504220694418917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4695adf68b311f0800000000000000
+      internalID: -1075313095467244309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c4059d9191078f0800000000000000
+      internalID: -544907956101034941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8fb25479a580ee0800000000000000
+      internalID: -1294685287121946387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3af67196b567c970800000000000000
+      internalID: 8775094233753647677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fountain_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec72164963504f30800000000000000
+      internalID: 4557734534511230188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
