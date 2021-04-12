@@ -9,6 +9,7 @@ TagManager:
   - girlrobotarmtalk
   - Robottalk
   - Oldwomantalk
+  - mail
   layers:
   - Default
   - TransparentFX
