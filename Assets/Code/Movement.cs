@@ -18,13 +18,14 @@ public class Movement : MonoBehaviour
     public int dialogcountergirlrobotarm = 0; //dialogcountergirlrobotarm börjar på 0-elanor
     public int dialogrobot = 0; //dialogrobit börjar på 0-elanor
     public int dialogoldlady = 0; //dialogoldlady börjar på 0-elanor
+    public int dialogCat = 0; //dialogCat börjar på 0 -Ian
     public bool showText = false; //Betyder att showtext är falsk i början- elanor
     public bool showText2 = false; //Betyder att showtext2 är falsk i början-elanor
     public bool showText3 = false; //Betyder att showtext3 är falsk- elanor
     public bool showtext4 = false; //Betyder att showtext3 är falsk-Elanor
     public bool showtext5 = false; //Betyder att showtext4 är falsk- elanor
     public Animator movement; //Referens till animator- elanor
-
+    public bool showtext6 = false; //showtext6 håller sig falsk- Ian
     public Rigidbody2D body; // Referens till RigedBody2D i player-Elanor
 
     void Start()
@@ -270,6 +271,21 @@ public class Movement : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyUp(KeyCode.T) && showtext6)//Om man klickar T och Showtext är sann -Ian
+        {
+            dialogCat += 1; //Dialogcounter ökar med en varje gång man trycker på T- Ian
+
+            switch (dialogCat) //Switch till Dialogcounter så att när man trycker T igen ska Nästa Case hända- Ian
+            {
+                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Ian
+                    dialog.text = "Meow?";
+                    break;
+                case 2:// Dialog 2 kommer upp - Ian
+                    dialog.text = "John where is my lasagna?" ; //Det som ska komma upp på skärmen här(Dialogen) -Ian
+                    break;
+               
+            }
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -322,10 +338,21 @@ public class Movement : MonoBehaviour
             }
             showtext5 = true; //Gör att om man är innanför collisonen så är showText5 sann-Elanor
         }
+
+        if (collision.transform.tag == "Cattalk") //Om man är inaför collidern -Ian
+        {
+            text.SetActive(true); //Kommer UI:n inte att synas -Ian
+            if (!showText) //Om showtexten är false -Ian
+            {
+                dialog.text = "Press 'T'"; //Gör så att om du går in i collidern så kommer texten "press T" titta fram -Ian
+            }
+            showtext6 = true; //Gör att om man är innanför collidern så är showText6 sann -Ian
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-         if (collision.transform.tag == "talk" || collision.transform.tag == "Littleboytalk" || collision.transform.tag == "girlrobotarmtalk" || collision.transform.tag == "Robottalk" || collision.transform.tag == "Oldwomantalk") //Om man är inte är inaför collisonen?-Elanor
+         if (collision.transform.tag == "talk" || collision.transform.tag == "Littleboytalk" || collision.transform.tag == "girlrobotarmtalk" || collision.transform.tag == "Robottalk" || collision.transform.tag == "Oldwomantalk" || collision.transform.tag == "Cattalk") //Om man inte är inaför collisonen -Elanor/Ian
          {
             text.SetActive(false); //Kommer UI:n inte att synas-Elanor
             showText = false; //Showtext blir false -Elanor
@@ -333,11 +360,13 @@ public class Movement : MonoBehaviour
             showText3 = false; //Show text3 blir falsk -Elanor
             showtext4 = false; //Show text4 blir falsk -Elanor
             showtext5 = false; //Show text5 blir falsk -Elanor
+            showtext6 = false; //show text6 förblir falsk -Ian
             dialogcounter = 0;// Gör så att Dialog countern blir på 0 igen om man går ut från collison- Elanor
             dialogcounterLittleBoy = 0; //Gör så att Dialogcountern till lilla pojken blir till 0 igen om man går ut från collison- Elanor
             dialogcountergirlrobotarm = 0; //Gör att dialogcountergirlrobotarm blir till 0 om man går ut från dens collison- Elanor
             dialogrobot = 0; //Gör att dialogrobot blir på 0 om man går ut ur collider- elanor
             dialogoldlady = 0; //Gör att dialogoldlady blir på 0 om man går ut ur collider - elanor
+            dialogCat = 0; //dialogCat hamnar på 0 om man går ut ur collidern -Ian
          }         
     }
 }
