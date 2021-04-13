@@ -10,6 +10,7 @@ TagManager:
   - Robottalk
   - Oldwomantalk
   - mail
+  - Cattalk
   layers:
   - Default
   - TransparentFX
