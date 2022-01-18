@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Sockets;
 using TMPro;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,10 +15,17 @@ public class Movement : MonoBehaviour
     public Text dialog; //Referens till UI:n vad som står. -Elanor
     public int dialogcounter = 0;// Visar att dialog countern är på 0 när man börjar-Elanor
     public int dialogcounterLittleBoy = 0; //Dialogcounterlittle boy börjar på 0- elanor.
+    public int dialogcountergirlrobotarm = 0; //dialogcountergirlrobotarm börjar på 0-elanor
+    public int dialogrobot = 0; //dialogrobit börjar på 0-elanor
+    public int dialogoldlady = 0; //dialogoldlady börjar på 0-elanor
+    public int dialogCat = 0; //dialogCat börjar på 0 -Ian
     public bool showText = false; //Betyder att showtext är falsk i början- elanor
     public bool showText2 = false; //Betyder att showtext2 är falsk i början-elanor
+    public bool showText3 = false; //Betyder att showtext3 är falsk- elanor
+    public bool showtext4 = false; //Betyder att showtext3 är falsk-Elanor
+    public bool showtext5 = false; //Betyder att showtext4 är falsk- elanor
     public Animator movement; //Referens till animator- elanor
-
+    public bool showtext6 = false; //showtext6 håller sig falsk- Ian
     public Rigidbody2D body; // Referens till RigedBody2D i player-Elanor
 
     void Start()
@@ -151,6 +159,133 @@ public class Movement : MonoBehaviour
                     break;
             }
         }
+
+        if (Input.GetKeyUp(KeyCode.T) && showText3)//Om man klickar T och Showtext är sann?-Elanor
+        {
+            dialogcountergirlrobotarm += 1; //Dialogcounter ökar med en varje gång man trycker på T- Elanor 
+
+            switch (dialogcountergirlrobotarm) //Switch till dialogcountergirlrobotarm så att när man trycker T igen ska Nästa Case hända-Elanor 
+            {
+                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Elanor 
+                    dialog.text = "Oh it's for me? Thanks for the letter!";
+
+                    break;
+                case 2:// Dialog 3 kommer upp - Elanor
+                    dialog.text = "It's a letter from some people in the war"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
+                    break;
+                case 3: //Nästa dialog kommer upp -Elanor 
+                    dialog.text = "I used to fight, it was really difficult but \n I was one of the best soldiers in my team";
+                    break;
+                case 4: //Nästa dialog kommer upp -Elanor
+                    dialog.text = "I lost several of my teammates..";
+                    break;
+                case 5://Nästa dialog kommer upp -Elanor
+                    dialog.text = "And my arms where severely damaged";
+                    break;
+                case 6://Nästa dialog kommer upp -Elanor
+                    dialog.text = "So I got two new ones, as you can see";
+                    break;
+                case 7://och så fortsätter det ^^
+                    dialog.text = "And I quickly realized how much power I had";
+                    break;
+                case 8:
+                    dialog.text = "I became the best in the team with my new mechanical arms ";
+                    break;
+                case 9:
+                    dialog.text = "Our team did well and I got several medals";
+                    break;
+                case 10:
+                    dialog.text = "I have now realized that I was just eager to be the best \n I was a killing machine back then";
+                    break;
+                case 11:
+                    dialog.text = "After my last mission I couldn't fight anymore \n My arms and my mind was to hurt";
+                    break;
+                case 12:
+                    dialog.text = "I can now see how blind and eager I was \n And I just wish that war never existed";
+                    break;
+                case 13:
+                    dialog.text = "Please never think that war is good \n It's a terrible thing that changes people";
+                    break;
+                case 14:
+                    dialog.text = "Thank you for the letter";
+                    break;                   
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.T) && showtext4)//Om man klickar T och Showtext är sann?-Elanor
+        {
+            dialogrobot += 1; //Dialogcounter ökar med en varje gång man trycker på T- Elanor 
+
+            switch (dialogrobot) //Switch till Dialogcounter så att när man trycker T igen ska Nästa Case hända-Elanor 
+            {
+                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Elanor 
+                    dialog.text = "Beep Bep Bop";
+                    break;
+                case 2:// Dialog 2 kommer upp - Elanor
+                    dialog.text = "I..s^ ThE wAR OvEr ..? Bep Bop"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
+                    break;
+                case 3: //Nästa dialog kommer upp -Elanor 
+                    dialog.text = "oNe dAY tHEy just ThreW mE here";
+                    break;
+                case 4: //Nästa dialog kommer upp -Elanor
+                    dialog.text = "And then they never came back...";
+                    break;
+                case 5:
+                    dialog.text = "ThANk yOu For thIs LetTer";
+                    break;
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.T) && showtext5)//Om man klickar T och Showtext5 är sann?-Elanor
+        {
+             dialogoldlady+= 1; //Dialogoldlady ökar med en varje gång man trycker på T- Elanor 
+
+            switch (dialogoldlady) //Switch till dialogoldlady så att när man trycker T igen ska Nästa Case hända-Elanor 
+            {
+                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Elanor 
+                    dialog.text = "Oh my lord!";
+                    break;
+                case 2:// Dialog 2 kommer upp - Elanor
+                    dialog.text = "It's from him, Thank you!"; //Det som ska komma upp på skärmen här(Dialogen) -Elanor 
+                    break;
+                case 3: //Nästa dialog kommer upp -Elanor 
+                    dialog.text = "He haven't came back yet, he needed to stay longer in the war \n because he is such a good soldier";
+                    break;
+                case 4: //Nästa dialog kommer upp -Elanor
+                    dialog.text = "But I really want him to come back now, he's missing me sooo much";
+                    break;
+                case 5://Nästa dialog kommer upp -Elanor
+                    dialog.text = "I feel so sorry for him, He needs to live on the ground \n in a tent? Can you believe that!?";
+                    break;
+                case 6://Nästa dialog kommer upp -Elanor.
+                    dialog.text = "I really hope that he's alright tho, I just want him to be safe";
+                    break;
+                case 7://och så fortsätter det ^^
+                    dialog.text = "What if something happens to him? \n I'm just worried for him";
+                    break;
+                case 8:
+                    dialog.text = "I just want him to come home";
+                    break;
+                case 9:
+                    dialog.text = "Thank you for delivering this to me";
+                    break;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.T) && showtext6)//Om man klickar T och Showtext är sann -Ian
+        {
+            dialogCat += 1; //Dialogcounter ökar med en varje gång man trycker på T- Ian
+
+            switch (dialogCat) //Switch till Dialogcounter så att när man trycker T igen ska Nästa Case hända- Ian
+            {
+                case 1: //Gör så att när man trycker T igen så kommer första Dialogen upp- Ian
+                    dialog.text = "Meow?";
+                    break;
+                case 2:// Dialog 2 kommer upp - Ian
+                    dialog.text = "John where is my lasagna?" ; //Det som ska komma upp på skärmen här(Dialogen) -Ian
+                    break;
+               
+            }
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -163,6 +298,7 @@ public class Movement : MonoBehaviour
             }
             showText = true; //Gör att om man är innanför collisonen så är showText sann-Elanor
         }
+
         if (collision.transform.tag == "Littleboytalk") //Om man är inaför collisonen?-Elanor
         {
             text.SetActive(true); //Kommer UI:n inte att synas-Elanor
@@ -172,16 +308,65 @@ public class Movement : MonoBehaviour
             }
             showText2 = true; //Gör att om man är innanför collisonen så är showText2 sann-Elanor
         }
+
+        if (collision.transform.tag == "girlrobotarmtalk") //Om man är inaför collisonen?-Elanor
+        {
+            text.SetActive(true); //Kommer UI:n inte att synas-Elanor
+            if (!showText) //Om showtexten är false- Elanor
+            {
+                dialog.text = "Press 'T'"; //Gör så att om du går in i colliderna så kommer texten "press T" komma fram- Elanor
+            }
+            showText3 = true; //Gör att om man är innanför collisonen så är showText3 sann-Elanor
+        }
+
+        if (collision.transform.tag == "Robottalk") //Om man är inaför collisonen?-Elanor
+        {
+            text.SetActive(true); //Kommer UI:n inte att synas-Elanor
+            if (!showText) //Om showtexten är false- Elanor
+            {
+                dialog.text = "Press 'T'"; //Gör så att om du går in i colliderna så kommer texten "press T" komma fram- Elanor
+            }
+            showtext4 = true; //Gör att om man är innanför collisonen så är showText4 sann-Elanor
+        }
+
+        if (collision.transform.tag == "Oldwomantalk") //Om man är inaför collisonen?-Elanor
+        {
+            text.SetActive(true); //Kommer UI:n inte att synas-Elanor
+            if (!showText) //Om showtexten är false- Elanor
+            {
+                dialog.text = "Press 'T'"; //Gör så att om du går in i colliderna så kommer texten "press T" komma fram- Elanor
+            }
+            showtext5 = true; //Gör att om man är innanför collisonen så är showText5 sann-Elanor
+        }
+
+        if (collision.transform.tag == "Cattalk") //Om man är inaför collidern -Ian
+        {
+            text.SetActive(true); //Kommer UI:n inte att synas -Ian
+            if (!showText) //Om showtexten är false -Ian
+            {
+                dialog.text = "Press 'T'"; //Gör så att om du går in i collidern så kommer texten "press T" titta fram -Ian
+            }
+            showtext6 = true; //Gör att om man är innanför collidern så är showText6 sann -Ian
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-         if (collision.transform.tag == "talk" || collision.transform.tag == "Littleboytalk") //Om man är inte är inaför collisonen?-Elanor
+         if (collision.transform.tag == "talk" || collision.transform.tag == "Littleboytalk" || collision.transform.tag == "girlrobotarmtalk" || collision.transform.tag == "Robottalk" || collision.transform.tag == "Oldwomantalk" || collision.transform.tag == "Cattalk") //Om man inte är inaför collisonen -Elanor/Ian
          {
             text.SetActive(false); //Kommer UI:n inte att synas-Elanor
             showText = false; //Showtext blir false -Elanor
             showText2 = false; //Show text2 blir falsk -Elanor
+            showText3 = false; //Show text3 blir falsk -Elanor
+            showtext4 = false; //Show text4 blir falsk -Elanor
+            showtext5 = false; //Show text5 blir falsk -Elanor
+            showtext6 = false; //show text6 förblir falsk -Ian
             dialogcounter = 0;// Gör så att Dialog countern blir på 0 igen om man går ut från collison- Elanor
             dialogcounterLittleBoy = 0; //Gör så att Dialogcountern till lilla pojken blir till 0 igen om man går ut från collison- Elanor
+            dialogcountergirlrobotarm = 0; //Gör att dialogcountergirlrobotarm blir till 0 om man går ut från dens collison- Elanor
+            dialogrobot = 0; //Gör att dialogrobot blir på 0 om man går ut ur collider- elanor
+            dialogoldlady = 0; //Gör att dialogoldlady blir på 0 om man går ut ur collider - elanor
+            dialogCat = 0; //dialogCat hamnar på 0 om man går ut ur collidern -Ian
          }         
     }
 }
